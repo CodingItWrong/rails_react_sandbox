@@ -5,9 +5,10 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   parser: '@babel/eslint-parser',
-  plugins: ['prettier', 'import', 'react'],
+  plugins: ['jest', 'prettier', 'import', 'react'],
   env: {
     es6: true,
+    'jest/globals': true,
     node: true,
   },
   globals: {
