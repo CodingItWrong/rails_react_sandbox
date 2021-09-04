@@ -7,7 +7,7 @@ export default function TodoList({ todos, onDelete }) {
         <li key={todo.id}>
           {todo.name}
           <button onClick={() => onDelete(todo)}>
-            Delete
+            Delete {todo.name}
           </button>
         </li>
       ))}
