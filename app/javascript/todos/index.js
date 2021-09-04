@@ -19,7 +19,8 @@ export default function Todos() {
       .then(response => {
         const todo = response.data;
         setTodos([...todos, todo]);
-      });
+      })
+      .catch(console.error);
   }
 
   function handleDelete(todo) {
@@ -27,7 +28,8 @@ export default function Todos() {
       .delete(`/api/todos/${todo.id}`)
       .then(() => {
         setTodos(todos.filter(t => t.id !== todo.id));
-      });
+      })
+      .catch(console.error);
   }
 
   return (
