@@ -1,24 +1,28 @@
-# README
+# rails_react_sandbox
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A small demonstration of running a React app backed by a plain JSON REST API, within Rails with Webpacker.
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+- Ruby 3.0.2
+- Postgres
+- Node
+- Yarn
+- Chromedriver: `brew install --cask chromedriver`
+- A process runner. Overmind is recommended
 
-* System dependencies
+## Running
 
-* Configuration
+```bash
+$ bin/serve
+```
 
-* Database creation
+This will run both Rails and `webpack-dev-server` to automatically rebuild JS assets and reload the page.
 
-* Database initialization
+Go to `http://localhost:5000`
 
-* How to run the test suite
+## Tests
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+$ bin/rspec
+```
