@@ -5,9 +5,8 @@ export default function NewTodoForm({onCreate}) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    onCreate(name).then(() => {
-      setName('');
-    });
+    onCreate(name);
+    setName('');
   }
 
   return (
