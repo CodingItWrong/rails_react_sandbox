@@ -10,10 +10,19 @@ gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
 
 group :development, :test do
+  gem 'pry-rails'
+  gem 'rspec-rails'
 end
 
 group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'rspec_junit_formatter'
+  gem 'selenium-webdriver'
 end
