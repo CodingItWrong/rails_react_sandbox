@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-export default function NewTodoForm({ onCreate }) {
+export default function NewTodoForm({onCreate}) {
   const [name, setName] = useState('');
 
   function handleSubmit(e) {
@@ -13,9 +13,7 @@ export default function NewTodoForm({ onCreate }) {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label for="name">
-          New Todo Name
-        </label>
+        <label htmlFor="name">New Todo Name</label>
         <input
           type="text"
           id="name"
@@ -23,9 +21,7 @@ export default function NewTodoForm({ onCreate }) {
           onChange={e => setName(e.target.value)}
         />
       </div>
-      <button type="submit">
-        Add
-      </button>
+      <button type="submit">Add</button>
     </form>
-  )
+  );
 }
