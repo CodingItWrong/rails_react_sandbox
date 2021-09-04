@@ -23,6 +23,14 @@ Go to `http://localhost:5000`
 
 ## Tests
 
+API and system tests:
+
 ```bash
 $ bin/rspec
+```
+
+JS tests:
+
+```bash
+$ yarn test
 ```
