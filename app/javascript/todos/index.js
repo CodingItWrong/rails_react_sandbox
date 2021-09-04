@@ -22,11 +22,19 @@ export default function Todos() {
       });
   }
 
+  function handleDelete(todo) {
+    return axios
+      .delete(`/api/todos/${todo.id}`)
+      .then(() => {
+        setTodos(todos.filter(t => t.id !== todo.id));
+      });
+  }
+
   return (
     <>
       <h1>Todos</h1>
       <NewTodoForm onCreate={handleCreate} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} onDelete={handleDelete} />
     </>
   );
 }
