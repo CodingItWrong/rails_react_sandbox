@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import NewTodoForm from './NewTodoForm';
 import TodoList from './TodoList';
 
 export default function Todos() {
@@ -12,9 +13,19 @@ export default function Todos() {
       .catch(console.error);
   }, []);
 
+  function handleCreate(name) {
+    return axios
+      .post('/api/todos', {name})
+      .then(response => {
+        const todo = response.data;
+        setTodos([...todos, todo]);
+      });
+  }
+
   return (
     <>
       <h1>Todos</h1>
+      <NewTodoForm onCreate={handleCreate} />
       <TodoList todos={todos} />
     </>
   );
