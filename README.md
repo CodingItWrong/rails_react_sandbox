@@ -5,7 +5,7 @@ A small demonstration of running a React app backed by a plain JSON REST API, wi
 Uses:
 
 - Postgres for the database
-- [Webpacker](https://edgeguides.rubyonrails.org/webpacker.html#hot-module-replacement-hmr) to serve the React app
+- [Webpacker](https://edgeguides.rubyonrails.org/webpacker.html) to serve the React app
 - [RSpec-Rails](https://github.com/rspec/rspec-rails) for testing
 - [Capybara](https://github.com/teamcapybara/capybara) for simulating user interaction
 - Chromedriver for running tests in headless Chrome
